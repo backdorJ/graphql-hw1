@@ -1,0 +1,6 @@
+{
+  "subgraph": "GraphQLMutation",
+  "http": {
+    "baseAddress": "http://localhost:5170/graphql"
+  }
+}

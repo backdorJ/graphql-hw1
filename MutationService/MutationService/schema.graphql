@@ -1,0 +1,25 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type AddProductPayload {
+  product: Product
+}
+
+type Mutation {
+  addProduct(input: AddProductInput!): AddProductPayload!
+}
+
+type Product {
+  id: String!
+  name: String!
+}
+
+type Query {
+  GetProduct(id: String!): Product!
+}
+
+input AddProductInput {
+  name: String!
+}

@@ -1,0 +1,6 @@
+{
+  "subgraph": "GraphQLTest",
+  "http": {
+    "baseAddress": "http://localhost:5103/graphql"
+  }
+}

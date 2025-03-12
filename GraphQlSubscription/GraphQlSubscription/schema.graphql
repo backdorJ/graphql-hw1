@@ -1,0 +1,16 @@
+schema {
+  query: Query
+  subscription: Subscription
+}
+
+type NumberEvent {
+  number: Int!
+}
+
+type Query {
+  helloWorld: String!
+}
+
+type Subscription {
+  numberOfSubscriptions: NumberEvent!
+}
