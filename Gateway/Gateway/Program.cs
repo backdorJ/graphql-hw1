@@ -13,12 +13,6 @@ builder.Services
     .AddFusionGatewayServer()
     .ConfigureFromFile(".fgp", watchFileForUpdates: true);
 
-var schema = builder.Services.BuildServiceProvider()
-    .GetRequiredService<IRequestExecutorResolver>()
-    .GetRequestExecutorAsync().Result.Schema;
-
-File.WriteAllText("schema.graphql", schema.ToDocument().ToString());
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

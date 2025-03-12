@@ -18,12 +18,6 @@ builder.Services.AddGraphQLServer()
     .AddFiltering()
     .AddSorting();
 
-var schema = builder.Services.BuildServiceProvider()
-    .GetRequiredService<IRequestExecutorResolver>()
-    .GetRequestExecutorAsync().Result.Schema;
-
-File.WriteAllText("schema.graphql", schema.ToDocument().ToString());
-
 builder.Services.AddDal(postgresConfig);
 
 var app = builder.Build();
